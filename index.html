@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" type="text/css" href="quiz-style.css">
+</head>
+
+<body>
+  <div class="quiz-container">
+    <h1>Quiz App</h1>
+    <form id="registration-form">
+      <input type="text" id="user-name" placeholder="UserName" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <div id="categorys" class="option-group">Select Category</div>
+      <div class="option"><input type="radio" id="film" name="category" value="11" required>
+        <label for="film" class="category-label">Entertainment: Film</label></div>
+        <div class="option">
+        <input type="radio" id="book" name="category" value="10"  required>
+        <label for="book" class="category-label">Entertainment: Books</label>
+        </div>
+        <div class="option"><input type="radio" id="art" name="category" value="25"  required>
+          <label for="art" class="category-label">Art</label> </div>
+          <div class="option">
+        <input type="radio" id="geo" name="category" value="22"  required>
+        <label for="geo" class="category-label">Geography</label>
+          </div>
+        <h4>Number of Questions:</h4>
+      <input type="number" id="number-question" name="number-question" min="5"  placeholder="Select number of questions" required>
+      <br/>
+      <h4 >Difficulty:</h4>
+      <div class="option">
+        <input type="radio" id="easy" name="level" value="easy" required>
+      <label for="easy">Easy</label><br>
+    </div>
+    <div class="option">  <input type="radio" id="medium" name="level" value="medium" required>
+      <label for="medium">Medium</label><br></div>
+    <div class="option"> <input type="radio" id="hard" name="level" value="hard" required>
+      <label for="hard">Hard</label></div>
+
+      
+      <br/>
+      <button class="registerButton" type="submit">Register</button>
+    </form>
+    <div id="quiz-questions" class="quiz">
+      <!-- Questions will be displayed here -->
+  </div>
+  <div id="quiz-options" class="options">
+      <!-- Options for the current question will be displayed here -->
+  </div>
+  <div id="safeTimer">
+    <h2 class="timer">Time Left:</h2>
+    <p id="safeTimerDisplay"></p>
+    </div>
+  <button id="submit-button" onclick="checkAnswer()">Submit Answer</button>
+  <div id="feedback" class="feedback">
+      <!-- Feedback for each question will be displayed here -->
+  </div>
+  <div id="score" class="score">
+      <!-- Final score will be displayed here -->
+  </div>
+  <div id="error-block" class="error">
+      <!-- Error messages will be displayed here -->
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+
+
